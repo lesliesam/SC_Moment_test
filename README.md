@@ -21,10 +21,17 @@ To launch the project container, please run the docker-compose.xml file under th
 
 # Moment Client
 
-It is a React Native based project which can run on both iOS and Android devices.
+It is a React Native based project which can run on both iOS and Android devices. In detail, it is based on Redux which is a state container and MVC framework.
 
 To launch the project on iOS, please run.
 ```
 cd moment_client
 react-native run-ios
 ```
+
+The following functions are implemented:
+- Users auto registration with device ID and the mapping of device ID and user will be created. Later on, users can auto login with that account. This is more like a guest access feature, we can add email/phone login later.
+- Users can change their user name
+- Users can enter their moment page and see all the posts. Currently, there is no friend relationship being created, thus users can see all the posts.
+- Users can view the post images in fullscreen mode by click the post.
+- Users can upload new post by adding content and upload images.
