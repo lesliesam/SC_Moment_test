@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "2bbfdf47-dff0-4d90-a6b6-e3a1ac32cf3f",
+		"name": "Moment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "4c0590a3-6ef4-4ee2-b521-cd20b8f056fe",
+			"name": "127.0.0.1:8080/Moment/user/signupWithDeviceId",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "deviceName",
+							"value": "ios",
+							"sessionValue": "ios",
+							"type": "text"
+						},
+						{
+							"key": "deviceId",
+							"value": "112238",
+							"sessionValue": "112234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/Moment/user/signupWithDeviceId",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"Moment",
+						"user",
+						"signupWithDeviceId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "886d5392-d566-4fe9-897f-5514c57e433f",
+			"name": "127.0.0.1:8080/Moment/user/updateUserName",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "session",
+						"value": "42f9b7408b92f85b8ee9db2c39ec31ab"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "MomentUser1",
+							"sessionValue": "MomentUser1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/Moment/user/updateUserName",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"Moment",
+						"user",
+						"updateUserName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "1390500c-f1fd-4cd5-a2c1-38a8f830a1ba",
+			"name": "Moment/moment/post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "session",
+						"value": "949a84e59043050b41bf268105e26d7f"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "text",
+							"value": "8 images",
+							"sessionValue": "First moment!",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"value": "https://moment-images-test.oss-cn-shanghai.aliyuncs.com/77d7b0a6f59a874b63199bf45ef5529b_example.jpeg,https://moment-images-test.oss-cn-shanghai.aliyuncs.com/25900e9e38f942001838c2a4be32339f_example2.png,https://moment-images-test.oss-cn-shanghai.aliyuncs.com/77d7b0a6f59a874b63199bf45ef5529b_example.jpeg,https://moment-images-test.oss-cn-shanghai.aliyuncs.com/25900e9e38f942001838c2a4be32339f_example2.png,https://moment-images-test.oss-cn-shanghai.aliyuncs.com/77d7b0a6f59a874b63199bf45ef5529b_example.jpeg,https://moment-images-test.oss-cn-shanghai.aliyuncs.com/25900e9e38f942001838c2a4be32339f_example2.png,https://moment-images-test.oss-cn-shanghai.aliyuncs.com/77d7b0a6f59a874b63199bf45ef5529b_example.jpeg,https://moment-images-test.oss-cn-shanghai.aliyuncs.com/25900e9e38f942001838c2a4be32339f_example2.png",
+							"sessionValue": "abb5147870b24a34ea598572e370ddbe_WechatIMG77.jpeg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8082/Moment/moment/post",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"Moment",
+						"moment",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "3b0cf13d-19b7-4755-aac9-1fa8c43c61ba",
+			"name": "Moment/moment/get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "session",
+						"value": "949a84e59043050b41bf268105e26d7f"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "127.0.0.1:8082/Moment/moment/get",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"Moment",
+						"moment",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "f1821841-e1d2-4f4f-8222-c5bc8be1362c",
+			"name": "Moment/image/uploadImage",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "session",
+						"value": "949a84e59043050b41bf268105e26d7f"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"sessionValue": {
+								"0": {}
+							},
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/Moment/image/uploadImage",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"Moment",
+						"image",
+						"uploadImage"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

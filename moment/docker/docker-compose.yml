@@ -1,0 +1,75 @@
+version: '2'
+
+services:
+  userService:
+    image: 'bitnami/tomcat:latest'
+    labels:
+      kompose.service.type: nodeport
+    ports:
+      - '8080:8080'
+    volumes:
+      - ../target/Moment-1.0-SNAPSHOT.war:/bitnami/tomcat/data/Moment.war
+    links:
+      - db
+      - memcached
+
+  imageService:
+      image: 'bitnami/tomcat:latest'
+      labels:
+        kompose.service.type: nodeport
+      ports:
+        - '8083:8080'
+      volumes:
+        - ../target/Moment-1.0-SNAPSHOT.war:/bitnami/tomcat/data/Moment.war
+      links:
+        - db
+        - memcached
+
+  momentService:
+      image: 'bitnami/tomcat:latest'
+      labels:
+        kompose.service.type: nodeport
+      ports:
+        - '8082:8080'
+      volumes:
+        - ../target/Moment-1.0-SNAPSHOT.war:/bitnami/tomcat/data/Moment.war
+      links:
+        - db
+        - memcached
+
+  db:
+      image: mysql
+      expose:
+        - '3306'
+      ports:
+          - '3306:3306'
+      volumes:
+          - ../mysql/db:/var/lib/mysql
+      environment:
+          - MYSQL_ROOT_PASSWORD=12345678
+
+  mongodb:
+      image: mongo:latest
+      container_name: "mongodb"
+      environment:
+        - MONGO_DATA_DIR=/data/db
+        - MONGO_LOG_DIR=/dev/null
+      ports:
+        - 27017:27017
+      command: mongod --smallfiles --logpath=/dev/null # --quiet
+
+  memcached:
+      image: 'bitnami/memcached:latest'
+      ports:
+        - '11211:11211'
+      environment:
+        - MEMCACHED_CACHE_SIZE=128
+
+  jenkins:
+      image: jenkins:latest
+      ports:
+          - "50000:50000"
+          - "8001:8080"
+      volumes:
+          - ../jenkins:/var/jenkins_home
+          - ../jenkins-log:/var/log/jenkins
