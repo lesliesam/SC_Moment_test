@@ -1,0 +1,33 @@
+{
+  "name": "AwesomeProject",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.0.0",
+    "react-native": "0.51.0",
+    "react-native-wheel-picker": "^1.2.0",
+	"react-redux": "^5.0.6",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.4",
+    "redux-thunk": "^2.1.0",
+	"react-native-device-info": "^0.13.0",
+	"react-native-fs": "^2.9.2",
+	"react-native-cacheable-image": "^1.4.1",
+	"react-native-viewpager": "^0.2.13",
+	"react-native-image-picker": "^0.26.7",
+	"react-native-deprecated-custom-components": "git+https://github.com/facebookarchive/react-native-custom-components.git"
+  },
+  "devDependencies": {
+    "babel-jest": "21.2.0",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "21.2.1",
+    "react-test-renderer": "16.0.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
